@@ -17,7 +17,7 @@ const TodoItem = ({ todo, index, editingId, editText, onToggle, onStartEdit, onS
                                 value={editText}
                                 onChange={onEditTextChange}
                                 onKeyDown={(e) => onEditKeyPress(e, todo.id)}
-                                className="flex-1 px-1.5 bg-white/10 text-white placeholder-white/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/50 font-medium text-sm border border-white/10"
+                                className="flex-1 px-1.5 bg-white/10 text-white placeholder-white/40 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-500/50 font-medium text-sm border border-white/10"
                                 autoFocus
                             />
                         </>

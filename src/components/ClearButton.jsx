@@ -1,6 +1,4 @@
 const ClearButton = ({onClick,completedTodos}) => {
-    // let completedTodos;
-    // let onClick;
     if(completedTodos === 0) return null;
     return(
         <>
