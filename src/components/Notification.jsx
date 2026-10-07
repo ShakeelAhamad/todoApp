@@ -10,7 +10,7 @@ const Notification = ({notification,onClose}) => {
                        {notification.type === "success" && <CircleCheckBig size={18}/>}
                        {notification.type === "error" && <CircleAlert size={18}/>}
                        <span className=" font-semibold text-sm">{notification.message}</span>
-                       <button onClick={onClose} className=" hover:opacity-80 transition-opacity">
+                       <button onClick={onClose} className=" hover:opacity-80 transition-opacity cursor-pointer">
                         <X size={16}/>
                        </button>
                   </div>

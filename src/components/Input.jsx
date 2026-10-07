@@ -12,7 +12,7 @@ const Input = ({value,onChange,onAdd,onKeyPress}) => {
                 placeholder="What's on your mind?"
                 className="flex-1 px-4 py-3 bg-white/10 text-white placeholder-white/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-green-500/50 font-medium text-sm border border-white/5 backdrop-blur-xl transition-all" 
             />
-            <button onClick={onAdd} className="px-6 py-3 bg-linear-to-br from-violet-500 via-green-500 to-fuchsia-500 rounded-xl text-white hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300 flex items-center gap-2 font-bold text-sm hover:scale-105 active:scale-105">
+            <button onClick={onAdd} className="px-6 py-3 bg-linear-to-br from-violet-500 via-green-500 to-fuchsia-500 rounded-xl text-white hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300 flex items-center gap-2 font-bold text-sm hover:scale-105 active:scale-105 cursor-pointer">
                 <Plus size={18} />Add
             </button>
            </div>

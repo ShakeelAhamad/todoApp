@@ -4,7 +4,7 @@ const TodoItem = ({ todo, index, editingId, editText, onToggle, onStartEdit, onS
     return (
         <>
             <div className={`group backdrop-blur-2xl bg-white/5 hover:bg-white/10 rounded-xl p-3 flex items-center gap-3 border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-green-500/10 ${todo.completed ? "opacity-50" : ""}`} style={{ animation: `slideIn 0.5s ease-out ${index * 0.5}s backwards` }}>
-                <button onClick={() => onToggle(todo.id)} className={`shrink w-6 h-6 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 ${todo.completed ? "bg-linear-to-br from-emerald-400 to-teal-500 border-emerald-400 shadow-lg shadow-emerald-400/50" : "border border-white/30 hover:border-emerald-400/50 hover:bg-emerald-500/20"}`}>
+                <button onClick={() => onToggle(todo.id)} className={`shrink w-6 h-6 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 cursor-pointer ${todo.completed ? "bg-linear-to-br from-emerald-400 to-teal-500 border-emerald-400 shadow-lg shadow-emerald-400/50" : "border border-white/30 hover:border-emerald-400/50 hover:bg-emerald-500/20"}`}>
                     {
                         todo.completed && <SquareCheckBig size={14} className="text-white font-bold" />
                     }
@@ -37,13 +37,13 @@ const TodoItem = ({ todo, index, editingId, editText, onToggle, onStartEdit, onS
                             <>
                               <button 
                                 onClick={() => onSaveEdit(todo.id)} 
-                                className="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500 hover:text-white transition-all duration-300 flex items-center justify-center transform hover:scale-110 active:scale-95 border border-emerald-500/30"
+                                className="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500 hover:text-white transition-all duration-300 flex items-center justify-center transform hover:scale-110 active:scale-95 border border-emerald-500/30 cursor-pointer"
                               >
                                 <Save size={14}/>
                               </button>
                               <button 
                                 onClick={onCancelEdit} 
-                                className="w-7 h-7 rounded-lg bg-white/10 text-white/60 hover:bg-white/20 hover:text-white transition-all duration-300 flex items-center justify-center transform hover:scale-110 active:scale-95"
+                                className="w-7 h-7 rounded-lg bg-white/10 text-white/60 hover:bg-white/20 hover:text-white transition-all duration-300 flex items-center justify-center transform hover:scale-110 active:scale-95 cursor-pointer"
                               >
                                 <X size={14}/>
                               </button>
@@ -52,13 +52,13 @@ const TodoItem = ({ todo, index, editingId, editText, onToggle, onStartEdit, onS
                             <>
                             <button 
                                 onClick={() => onStartEdit(todo.id,todo.text)} 
-                                className="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-300 hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center transform hover:scale-110 active:scale-95 border border-blue-500/30"
+                                className="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-300 hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center transform hover:scale-110 active:scale-95 border border-blue-500/30 cursor-pointer"
                               >
                                 <SquarePen size={14}/>
                               </button>
                               <button 
                                 onClick={() => onDelete(todo.id)} 
-                                className="w-7 h-7 rounded-lg bg-rose/10 text-rose-300 hover:bg-rose-500 hover:text-white transition-all duration-300 flex items-center justify-center transform hover:scale-110 active:scale-95 border border-rose-500"
+                                className="w-7 h-7 rounded-lg bg-rose/10 text-rose-300 hover:bg-rose-500 hover:text-white transition-all duration-300 flex items-center justify-center transform hover:scale-110 active:scale-95 border border-rose-500 cursor-pointer"
                               >
                                 <Trash2 size={14}/>
                               </button>
